@@ -1,8 +1,8 @@
-document.getElementById('submit').addEventListener('click', function(event) {
-    event.preventDefault()
-    form = document.getElementById('form')
-    fetch(form.action, {method:'POST', body: new FormData(form)});
-})
+// document.getElementById('submit').addEventListener('click', function(event) {
+//     event.preventDefault()
+//     form = document.getElementById('form')
+//     fetch(form.action, {method:'POST', body: new FormData(form)});
+// })
 
 // fetch = 'http://localhost:8000/api/movies/{id}'
 

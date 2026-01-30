@@ -26,7 +26,7 @@ switch ($method) {
         break;
 
     case 'POST':
-        
+        var_dump($_POST);
         $title = $_POST['title'];
         $description = $_POST['description'];
         $duration = $_POST['duration'];
