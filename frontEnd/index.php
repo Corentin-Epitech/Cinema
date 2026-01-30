@@ -8,7 +8,6 @@
 <body>
     <div>
         <form id="form" action="/backEnd/main.php" method="post">
-            <input type="text" pattern="[0-9]*" name="id">
             <input type="text" name="title">
             <input type="text" name="description">
             <input type="text" pattern="[0-9]*" name="duration">
@@ -19,15 +18,10 @@
             <input type="date" name="updated">
             <button id="submit" type="submit">Add</button>
         </form>
-        <form action="">
-            <input type="s">
-            <button type="submit">
-
-            </button>
-        </form>
         <?php
         include('../backEnd/main.php');
         ?>
+
     </div>
 
 </body>
