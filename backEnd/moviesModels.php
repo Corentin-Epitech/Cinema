@@ -2,11 +2,11 @@
 include 'main.php';
 
 header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+header("Access-Control-Allow-Methods: *" );
 
 $method = $_SERVER['REQUEST_METHOD'];
-
-
-
 
 switch ($method) {
     case 'GET':
@@ -26,7 +26,6 @@ switch ($method) {
         break;
 
     case 'POST':
-        var_dump($_POST);
         $title = $_POST['title'];
         $description = $_POST['description'];
         $duration = $_POST['duration'];
@@ -42,6 +41,8 @@ switch ($method) {
     case 'PUT':
         $result = [];
         parse_str(file_get_contents('php://input'), $result);
+        $result = json_decode(key($result), true);
+        var_dump($result);
         $id = $result['id'];
         $title = $result['title'];
         $description = $result['description'];
