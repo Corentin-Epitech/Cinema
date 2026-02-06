@@ -46,9 +46,9 @@ class Movies
     {
         $query = $this->db->prepare("UPDATE  movies SET  title=?, 
                      description=?, duration=?, release_year=?, genre=?, director=?, created_at=?, updated_at=? WHERE id =?");
-        $created =  strtotime($_POST['created_at']);
-        $updated =  strtotime($_POST['updated_at']);
-        $query->execute(array($_POST["id"],
+        $created = $_POST['created_at'];
+        $updated =  $_POST['updated_at'];
+        $query->execute(array(
         $_POST["title"],
         $_POST["description"],
         $_POST["duration"],
@@ -56,7 +56,8 @@ class Movies
         $_POST["genre"],
         $_POST["director"],
         $created,
-        $updated));
+        $updated,
+        $_POST["id"]));
         echo json_encode(["message" => "User updated successfully"]);
     }
 
