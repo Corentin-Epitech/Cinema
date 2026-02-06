@@ -35,17 +35,7 @@ class movieControllers
 
     public function updateMovie()
     {
-        $this->movieModel->updateMovies(
-            $id = $_POST['$id'],
-            $title = $_POST['title'],
-            $description = $_POST['description'],
-            $duration = $_POST['duration'],
-            $release_year = $_POST['release_year'],
-            $genre = $_POST['genre'],
-            $director = $_POST['director'],
-            $created_at = $_POST['created_at'],
-            $updated_at = $_POST['updated_at'],
-        );
+        $this->movieModel->updateMovies();
         header('Location: /backEnd/update');
     }
 

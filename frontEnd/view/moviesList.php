@@ -35,7 +35,7 @@
             <?php echo "<td>" . $movie['created_at'] . "</td>"; ?>
             <?php echo "<td>" . $movie['updated_at'] . "</td>"; ?>
             <?php echo "<td> <a href='/backEnd/delete?id=" ?>    <?php echo $movie['id']; ?>    <?php echo "'>Supprimer</a> </td>"; ?>
-            <?php echo "<td> <button onclick='modifier(this)'>Modifier </button></td>"; ?>
+            <?php echo "<td> <button onclick='modifierMovie(this)'>Modifier </button></td>"; ?>
             <?php echo "</tr>"; ?>
         <?php endforeach; ?>
     </table>

@@ -1,4 +1,4 @@
-function modifier(e) {
+function modifierMovie(e) {
     $id = e
     $test = document.getElementById($id.parentNode.parentNode.id).querySelectorAll('td')
     console.log($test)
@@ -26,4 +26,29 @@ function modifier(e) {
     $dir.setAttribute('value', $array[6].innerHTML),
     $create.setAttribute('value', $array[7].innerHTML),
     $update.setAttribute('value', $array[8].innerHTML)
+    }
+
+    function modifierRoom(e) {
+    $id = e
+    $test = document.getElementById($id.parentNode.parentNode.id).querySelectorAll('td')
+    console.log($test)
+    $array = Array.from($test)
+    console.log($array)
+    $array.forEach((element) => console.log(element))
+
+    $InputId = document.getElementById('input-id')
+    $title = document.getElementById('input-Name')
+    $desc = document.getElementById('input-capacity')
+    $dur = document.getElementById('input-type')
+    $year = document.getElementById('input-active')
+
+    $update = document.getElementById('input-update')
+
+
+    $InputId.setAttribute('value', $array[0].innerHTML),
+    $title.setAttribute('value', $array[1].innerHTML),
+    $desc.setAttribute('value', $array[2].innerHTML),
+    $dur.setAttribute('value', $array[3].innerHTML),
+    $year.setAttribute('value', $array[4].innerHTML),
+    $update.setAttribute('value', $array[5].innerHTML)
     }
